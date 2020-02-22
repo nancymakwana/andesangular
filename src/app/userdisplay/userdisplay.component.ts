@@ -10,8 +10,8 @@ import { UserMoreDetailsComponent } from './user-more-details/user-more-details.
   styleUrls: ["./userdisplay.component.css"]
 })
 export class UserdisplayComponent implements OnInit {
-  userarr: user[] = [];
-  displayedColumns: string[] = ["name", "email", "password","action"];
+userarr: user[] = [];
+  displayedColumns: string[] = ["fname", "user_email", "city","action"];
   dataSource=new MatTableDataSource();
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -29,30 +29,24 @@ export class UserdisplayComponent implements OnInit {
   }
   OnDeleteClick(item:user)
   {
-    let position = this.userarr.indexOf(item);
-    if (confirm("do you want to delete?")) {
-      this._data.deleteUser(item.uid).subscribe((data: any) => {
-        console.log(data);
-        this.userarr.splice(position,1);
-      });
-    }
+    this._router.navigate(['/nav/userdelete',item.user_id]);
   }
+
   OnAddClick() {
-    this._router.navigate(['adduser']);
+    this._router.navigate(['/nav/useradd']);
   }
 
 
   onUpdateClick(item: user) {
-    this._router.navigate(["/edituser", item.uid]);
+    this._router.navigate(["/nav/useredit", item.user_id]);
   }
-  OnViewMoreClick(item:user){
-    this._dailog.open(UserMoreDetailsComponent,{
-      data:item
-    });
-  }
+   OnViewMoreClick(item:user){
+      this._router.navigate(['/nav/userviewmore',item.user_id]);
+      console.log(item.user_id);
+   }
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  applyFilter(filtervalue:string) {
+    this.dataSource.filter = filtervalue.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();

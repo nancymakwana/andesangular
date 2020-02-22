@@ -1,0 +1,55 @@
+<div class="container">
+  <form [formGroup]="productEdit" (ngSubmit)="OnEdit()">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="product name" formControlName="pro_name">
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Product Information" formControlName="info">
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+    <select formControlName="size">
+      <option>size</option>
+      <option>4-6 year</option>
+      <option>7-10 year</option>
+      <option>11-15 year</option>
+      <option>15 year above</option>
+    </select>
+    <mat-divider></mat-divider>
+
+    <select formControlName="color">
+      <option>colour</option>
+      <option>red</option>
+      <option>yellow</option>
+      <option>green</option>
+      <option>pink</option>
+      <option>black</option>
+    </select>
+    <mat-divider></mat-divider>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Rent" formControlName="rent">
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Stock On hand" formControlName="soh">
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="special instruction" formControlName="sp_instruction">
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <select formControlName="fk_cat_id">
+      <option *ngFor="let item of categorydata" [value]="item.cat_id">{{item.cat_name}}</option>
+    </select>
+    <!-- <input type="file" (change)="changeImg($event)"> -->
+    <mat-divider></mat-divider>
+    <div>
+      <button type="submit" mat-raised-button>UPDATE</button>
+    </div>
+    <div>
+      <button (click)="OnCancel()" mat-raised-button>CANCEL</button>
+    </div>
+  </form>
+</div>

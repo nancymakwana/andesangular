@@ -1,0 +1,13 @@
+<div class="container">
+  <form  #f="ngForm" (ngSubmit)="OnAdd(f)">
+    <mat-divider></mat-divider>
+      <input type="file" (change)="changeImg($event)">
+      <mat-divider></mat-divider>
+       <div>
+      <button type="submit"  mat-raised-button >ADD</button>
+    </div>
+    <div>
+      <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
+    </div>
+  </form>
+</div>

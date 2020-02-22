@@ -1,16 +1,33 @@
 table {
   width: 100%;
+  background-color:thistle ;
 }
 
 .mat-form-field {
   font-size: 14px;
   width: 100%;
+  font: 16px Arial, Helvetica, sans-serif;
+}
+.btn{
+  background:whitesmoke;
 }
 
-td, th {
+td {
   width: 25%;
 }
+th {
+
+  background-color: pink;
+  text-transform: uppercase;
+  width: 25%;
+  font-weight: 500;
+  font-size: 14px;
+}
+
 .example-button-row button,
 .example-button-row a {
   margin-right: 8px;
+  background: black;
 }
+
+

@@ -1,0 +1,59 @@
+<!-- <div class="container">
+  <form [formGroup]="loginform" (ngSubmit)="OnLogin()">
+    <div class="form-group">
+      <input type="text" class="text-control" placeholder="Enter email id" formControlName="user_email"><br>
+      <label class="alert alert-danger" *ngIf="loginform.get('user_email').hasError('required') && !loginform.get('user_email').pristine">*Email Id Required</label>
+    </div>
+     <div class="form-group">
+      <input type="text" class="text-control" placeholder="Enter Password" formControlName="password"><br>
+      <label class="alert alert-danger" *ngIf="loginform.get('password').hasError('required') && !loginform.get('password').pristine">*Email Id Required</label>
+    </div>
+
+<mat-divider></mat-divider>
+
+    <mat-form-field class="example-full-width">
+      <input matInput  placeholder="password" [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <label class="alert alert-danger" *ngIf="loginform.get('password').hasError('required') && !loginform.get('password').pristine">*Email Id Required</label>
+      </button>
+      </mat-form-field>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]="!loginform.valid">Login</button>
+    </div>
+  </form>
+</div> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple login form</title>
+
+
+  </head>
+  <body> -->
+    <form [formGroup]="loginform" (ngSubmit)="OnLogin()">
+      <h1>Login Form</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="uname"><strong>Username</strong></label>
+        <input type="text" placeholder="Enter Username" formControlName="fname">
+        <label class="alert alert-danger" *ngIf="loginform.get('fname').hasError('required') && !loginform.get('fname').pristine">*User name Id Required</label>
+        <label for="psw"><strong>Password</strong></label>
+         <input type="password" placeholder="Enter Password" formControlName="password">
+
+        <label class="alert alert-danger" *ngIf="loginform.get('password').hasError('required') && !loginform.get('password').pristine">*Password Required</label>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginform.valid">Login</button>
+      </div>
+      <div class="container" style="background-color: #eee">
+        <label style="padding-left: 15px">
+        <!-- <input type="checkbox"  checked="checked" name="remember"> Remember me -->
+        </label>
+        <!-- <span class="psw">Forgot password?</span> -->
+      </div>

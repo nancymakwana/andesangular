@@ -1,0 +1,30 @@
+<mat-list >
+  <img mat-card-image  style="align-content: 'right: ;';" height="200" width="200" src="http://localhost:3000/images/deliveryman_images/{{img}}" alt="Photo of user">
+  <mat-list-item >First_name :  {{fname}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item >Surname :  {{lname}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Email_id  :  {{user_email}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Gender  :   {{gender}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Mobile_no :  {{mob_no}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Address :   {{address}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>City  :  {{city}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Pincode :  {{pincode}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Password :  {{password}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <!-- <mat-list-item>{{img}}</mat-list-item> -->
+  <mat-divider></mat-divider>
+</mat-list>
+<div>
+  <button (click)="OnDeleteClick()" mat-raised-button >Delete</button>
+</div>
+<div >
+  <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
+</div>
+

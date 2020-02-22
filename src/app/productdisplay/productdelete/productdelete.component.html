@@ -1,0 +1,29 @@
+
+<mat-list >
+  <!-- <img mat-card-image  style="align-content: 'right: ;';" height="200" width="200" src="http://localhost:3000/images/product_images/{{img}}" alt="Photo of user"> -->
+  <mat-list-item >Product Name :  {{pro_name}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Size  :  {{size}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Color  :   {{color}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Rent :  {{rent}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Soh :   {{soh}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Information  :  {{info}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>special info.:  {{sp_instruction}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item >Category Name :  {{cat_name}}</mat-list-item >
+  <mat-divider></mat-divider>
+  <!-- <mat-list-item>{{img}}</mat-list-item> -->
+  <mat-divider></mat-divider>
+  <div>
+    <button (click)="onDeleteClick()"  mat-raised-button >Delete</button>
+  </div>
+  <div>
+    <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
+  </div>
+</mat-list>
+

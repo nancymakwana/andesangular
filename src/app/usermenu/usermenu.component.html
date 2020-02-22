@@ -3,15 +3,31 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">adduser</a>
-      <a mat-list-item href="#">update user</a>
-      <a mat-list-item href="#">delete user</a>
+    <mat-toolbar>
+      <img src="../../assets/images/andes.jpg" height="45" width="45">
+      Menu</mat-toolbar>
+    <mat-nav-list >
+      <span> Welcome {{fname}}</span>
+       <!-- <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="image"></div>
+          <mat-card-title>{{fname}}</mat-card-title>
+           <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+       </mat-card> -->
+      <a mat-list-item (click)="onClick('/nav/')" ><mat-icon>people</mat-icon>customer</a>
+      <a mat-list-item (click)="onClick('/nav/deliveryman/')"  ><mat-icon>supervised_user_circle</mat-icon>Deliveryman</a>
+      <a mat-list-item (click)="onClick('/nav/product/')" ><mat-icon>add_box</mat-icon>product_details</a>
+      <a mat-list-item (click)="onClick('/nav/category/')"><mat-icon>category</mat-icon>category_details</a>
+      <a mat-list-item routerLink="/nav/orderdelivery/"><mat-icon>category</mat-icon>delivery_details</a>
+      <a mat-list-item routerLink="/nav/order/"><mat-icon>card_travel</mat-icon>Order_details</a>
+      <a mat-list-item routerLink="/nav/deliveryreturn"><mat-icon>next_week</mat-icon>return_details</a>
+      <a mat-list-item routerLink="#"><mat-icon>healing</mat-icon>Damage_order</a>
+      <a mat-list-item (click)="onLogOut()"><mat-icon>exit_to_app</mat-icon>LOGOUT</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar  class="mainpage">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -20,9 +36,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>admindemo</span>
+      <span >Andes Costume Admin </span>
+      <button (click)="onprofileClick('/nav/myprofile/')">Edit Profile</button>
+      <!-- <br><h4>   Welcome ,{{fname}}</h4> -->
     </mat-toolbar>
-    <router-outlet></router-outlet>
+    <router-outlet ></router-outlet>
     <!-- Add Content Here -->
 
   </mat-sidenav-content>

@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  background:pink;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.btn{
+  background:whitesmoke;
+}
+.header
+{
+
+  text-align: center;
+}
+
+td, th {
+  width: 25%;
+  font-size: larger;
+  text-align: center;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  background: black;
+}
+
+

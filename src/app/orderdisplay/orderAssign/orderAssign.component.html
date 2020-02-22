@@ -1,0 +1,46 @@
+<mat-list  >
+  <mat-list-item >Bill no :  {{order_id}}</mat-list-item>
+    <mat-divider></mat-divider>
+      <mat-list-item >First_name :  {{fname}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item >Surname :  {{lname}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Email_id  :  {{user_email}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Gender  :   {{gender}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Mobile_no :  {{mob_no}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Address :   {{address}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>City  :  {{city}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Pincode :  {{pincode}}</mat-list-item>
+    <div *ngFor="let item of orderarr">
+    <mat-list-item >Product Name :  {{item.pro_name}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Size  :  {{item.size}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Color  :   {{item.color}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Rent :  {{item.rent}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Information  :  {{item.info}}</mat-list-item>
+  <mat-divider></mat-divider>
+    </div>
+  </mat-list>
+    <form class="container" [formGroup]="DeliveryAssign" (ngSubmit)="onAssign()">
+      <label>Select Deliveryman for delivery?</label><br>
+    <select formControlName="dm_user_id">
+      <option *ngFor="let item of deliverymandata" [value]="item.user_id">{{item.fname}}</option>
+    </select>
+    <div>
+      <button type="submit"  mat-raised-button >Accept</button>
+    </div>
+    <div>
+      <button (click)="OnCancel()" mat-raised-button >Discard</button>
+    </div>
+  </form>
+
+
+

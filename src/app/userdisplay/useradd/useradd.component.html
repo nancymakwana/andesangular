@@ -1,1 +1,46 @@
-<p>useradd works!</p>
+<div class="form-style-8">
+  <h2>
+    add user
+  </h2>
+  <form #f="ngForm" (ngSubmit)="OnAdd(f)">
+    <input type="text" placeholder="Email" name="user_email" ngModel />
+    <input placeholder="password" [type]="hide ? 'password' : 'text'" name="password" ngModel >
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <input type="text" placeholder="First_name" name="fname" ngModel>
+    <input type="text" placeholder="Last_name" name="lname" ngModel>
+    <textarea placeholder="Address" name="address" ngModel></textarea>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <input type="text" placeholder="City" name="city" ngModel>
+        </td>
+        <td>
+          <input type="text" #postalCode maxlength="6" placeholder="pincode" value="3800" name="pincode" ngModel>
+          <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+        </td>
+      </tr>
+    </table>
+    <span matPrefix>+91 &nbsp;</span>
+    <input type="tel" placeholder="Mobile_no" name="mob_no" ngModel>
+    <mat-icon matSuffix>phone</mat-icon>
+    <mat-radio-group name="gender" ngModel required #gender="ngModel">
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+    </mat-radio-group>
+   <!-- <div>
+    <label>Gender : </label>
+      <mat-radio-button value="male"  name="gender" ngModel>Male</mat-radio-button>
+      <mat-radio-button value="female" name="gender" ngModel>Female</mat-radio-button>
+    </div> -->
+    <input type="file" (change)="changeImg($event)">
+    <div>
+      <input type="submit" value="add">
+     </div>
+    <div>
+      <input type="button" (click)="OnCancel()" value="cancel">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<form class="container" #f="ngForm" (ngSubmit)="OnAdd(f)">
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Category_name" name="cat_name" ngModel>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <div>
+    <button type="submit" [disabled]="!f.valid"  mat-raised-button >ADD</button>
+  </div>
+  <div>
+    <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
+  </div>
+  </form>
