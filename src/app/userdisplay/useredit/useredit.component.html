@@ -1,50 +1,34 @@
-
+<div class="form-style-8">
+  <h2>
+    Edit user
+  </h2>
 <form class="container" #f="ngForm" (ngSubmit)="OnEdit(f)">
-    <img mat-card-image  style="align-content: 'right: ;';" height="200"
+    <img type="img"  style="align-content: 'right: ;';" height="200"
     width="200" src="http://localhost:3000/images/customer_images/{{img}}"
     alt="Photo of user">
     <input type="file" (change)="changeImg($event)">
-    <mat-divider></mat-divider>
-  <mat-form-field class="example-full-width">
-      <input matInput placeholder="Email" name="user_email" #email [(ngModel)]="user_email">
-  </mat-form-field>
-<mat-divider></mat-divider>
-<mat-form-field class="example-full-width">
-<input matInput  placeholder="password" [type]="hide ? 'password' : 'text'" name="password" #pwd [(ngModel)]="password">
+      <input type="text" placeholder="Email" name="user_email" #email [(ngModel)]="user_email">
+<input type="text" placeholder="password" [type]="hide ? 'password' : 'text'" name="password" #pwd [(ngModel)]="password">
 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
 </button>
-</mat-form-field>
-<mat-divider></mat-divider>
-<mat-form-field class="example-full-width">
-<input matInput placeholder="First_name" name="fname" #fnm [(ngModel)]="fname">
-</mat-form-field>
-<mat-divider></mat-divider>
-<mat-form-field class="example-full-width">
-<input matInput placeholder="Last_name" name="lname" #lnm [(ngModel)]="lname">
-</mat-form-field>
-<mat-divider></mat-divider>
 
-<mat-form-field class="example-full-width">
-  <textarea matInput placeholder="Address" name="address" #add [(ngModel)]="address"></textarea>
-</mat-form-field>
-<mat-divider></mat-divider>
+
+<input type="text" placeholder="First_name" name="fname" #fnm [(ngModel)]="fname">
+<input type="text" placeholder="Last_name" name="lname" #lnm [(ngModel)]="lname">
+  <textarea type="text" placeholder="Address" name="address" #add [(ngModel)]="address"></textarea>
 <table class="example-full-width" cellspacing="0"><tr>
-    <td><mat-form-field class="example-full-width">
-      <input matInput placeholder="City" name="city" #ct [(ngModel)]="city">
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <input matInput #postalCode maxlength="6" placeholder="pincode" value="3800" name="pincode" #pin [(ngModel)]="pincode">
+    <td>
+      <input type="text" placeholder="City" name="city" #ct [(ngModel)]="city">
+    </td>
+    <td>
+      <input type="text" #postalCode maxlength="6" placeholder="pincode" value="3800" name="pincode" #pin [(ngModel)]="pincode">
       <mat-hint align ="end">{{postalCode.value.length}} / 6</mat-hint>
-    </mat-form-field></td>
+    </td>
   </tr></table>
-<mat-divider></mat-divider>
-<mat-form-field class="example-full-width">
   <span matPrefix>+91 &nbsp;</span>
-  <input type="tel" matInput placeholder="Mobile_no" name="mob_no" #mob [(ngModel)]="mob_no">
+  <input type="tel"  placeholder="Mobile_no" name="mob_no" #mob [(ngModel)]="mob_no">
   <mat-icon matSuffix>phone</mat-icon>
-</mat-form-field>
-<mat-divider></mat-divider>
 
 <!-- <mat-radio-group aria-label="Gender : "> -->
   <!-- <input type="radio" value="male" name="gender" [(ngModel)]="gender">Male
@@ -63,12 +47,10 @@
       <mat-radio-button value="male"  name="gender" ngModel>Male</mat-radio-button>
       <mat-radio-button value="female" name="gender" ngModel>Female</mat-radio-button>
     </div> -->
-    <mat-divider></mat-divider>
-
     <div>
-        <button type="submit" [disabled]="!f.valid"  mat-raised-button >UPDATE</button>
+        <input type="submit" [disabled]="!f.valid"   value="UPDATE">
       </div>
       <div>
-        <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
+        <input type="button" (click)="OnCancel()" value="CANCEL">
       </div>
 </form>

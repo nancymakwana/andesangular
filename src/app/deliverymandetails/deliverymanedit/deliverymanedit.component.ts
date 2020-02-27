@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UserdataService } from 'src/app/userdisplay/userdata.service';
 import { DeliverymandataService } from 'src/app/deliverymandata.service';
+import { user } from 'src/app/userdisplay/user';
 
 @Component({
   selector: 'app-deliverymanedit',

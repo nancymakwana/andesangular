@@ -4,6 +4,7 @@ import { ProductdataService } from "../productdata.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { CategorydataService } from 'src/app/categorydata.service';
 import { product } from '../product';
+import { category } from 'src/app/category-details/category';
 
 @Component({
   selector: "app-productedit",

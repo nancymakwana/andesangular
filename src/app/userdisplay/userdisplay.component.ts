@@ -3,6 +3,7 @@ import { UserdataService } from "./userdata.service";
 import { MatTableDataSource, MatSort, MatPaginator, MatDialogRef, MatDialog } from "@angular/material";
 import { Router } from '@angular/router';
 import { UserMoreDetailsComponent } from './user-more-details/user-more-details.component';
+import { user } from './user';
 
 @Component({
   selector: "app-userdisplay",

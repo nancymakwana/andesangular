@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 import { validateHorizontalPosition } from "@angular/cdk/overlay";
 import { product } from "../product";
 import { CategorydataService } from "src/app/categorydata.service";
+import { category } from 'src/app/category-details/category';
 
 @Component({
   selector: "app-productadd",

@@ -1,12 +1,15 @@
-<form class="container" #f="ngForm" (ngSubmit)="onDeleteClick(f)">
-  <mat-form-field class="example-full-width">
-  <input matInput placeholder="First_name" name="cat_name" [(ngModel)]="cat_name">
-  </mat-form-field>
-       <div>
-          <button type="submit" [disabled]="!f.valid"  mat-raised-button >Delete</button>
-        </div>
-        <div>
-          <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
-        </div>
-  </form>
+<div class="form-style-8">
+  <h2>
+    Delete Category
+  </h2>
 
+<form class="container" #f="ngForm" (ngSubmit)="onDeleteClick(f)">
+  <input  type="text" placeholder="Category_name" name="cat_name" [(ngModel)]="cat_name">
+  <div>
+    <input type="submit" [disabled]="!f.valid"   value="DELETE">
+  </div>
+  <div>
+    <input type="button" (click)="OnCancel()" value="CANCEL">
+  </div>
+  </form>
+</div>

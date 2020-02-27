@@ -1,13 +1,15 @@
-<div class="container">
+<div class="form-style-8">
+  <h2>
+    Add Image
+  </h2>
+
   <form  #f="ngForm" (ngSubmit)="OnAdd(f)">
-    <mat-divider></mat-divider>
       <input type="file" (change)="changeImg($event)">
-      <mat-divider></mat-divider>
        <div>
-      <button type="submit"  mat-raised-button >ADD</button>
+      <input type="submit"  value="ADD">
     </div>
     <div>
-      <button (click)="OnCancel()" mat-raised-button >CANCEL</button>
+      <input type="button" (click)="OnCancel()"  value="CANCEL">
     </div>
   </form>
 </div>

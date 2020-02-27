@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserdataService } from '../userdisplay/userdata.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FILE } from 'dns';
+import { user } from '../userdisplay/user';
 
 @Component({
   selector: 'app-myprofile',

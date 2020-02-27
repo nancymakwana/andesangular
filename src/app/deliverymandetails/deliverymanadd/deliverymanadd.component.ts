@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { DeliverymandataService } from "src/app/deliverymandata.service";
+import { user } from 'src/app/userdisplay/user';
 
 @Component({
   selector: "app-deliverymanadd",

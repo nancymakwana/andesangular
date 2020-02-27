@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeliverymandataService } from 'src/app/deliverymandata.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { user } from 'src/app/userdisplay/user';
 
 @Component({
   selector: 'app-deliverymandelete',

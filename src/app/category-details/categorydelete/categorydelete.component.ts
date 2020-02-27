@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategorydataService } from 'src/app/categorydata.service';
+import { category } from '../category';
 
 @Component({
   selector: 'app-categorydelete',

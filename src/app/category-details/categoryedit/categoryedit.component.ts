@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryaddComponent } from '../categoryadd/categoryadd.component';
 import { CategorydataService } from 'src/app/categorydata.service';
+import { category } from '../category';
 
 @Component({
   selector: 'app-categoryedit',

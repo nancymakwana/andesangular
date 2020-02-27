@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { UserdataService } from "../userdata.service";
+import { user } from '../user';
 
 @Component({
   selector: "app-useredit",

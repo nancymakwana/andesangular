@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort, MatDialog } from '@angular/material';
 import { CategorydataService } from '../categorydata.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { user } from '../userdisplay/user';
+import { category } from './category';
 
 @Component({
   selector: 'app-category-details',

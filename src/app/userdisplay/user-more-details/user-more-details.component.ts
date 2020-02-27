@@ -7,6 +7,7 @@ import {
 import { UserdataService } from "../userdata.service";
 import { ActivatedRoute } from "@angular/router";
 import { ConcatSource } from 'webpack-sources';
+import { user } from '../user';
 
 @Component({
   selector: "app-user-more-details",

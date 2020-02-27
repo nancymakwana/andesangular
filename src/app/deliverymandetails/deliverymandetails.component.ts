@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeliverymandataService } from '../deliverymandata.service';
 import { ActivatedRoute } from '@angular/router';
+import { user } from '../userdisplay/user';
 
 @Component({
   selector: 'app-deliverymandetails',
