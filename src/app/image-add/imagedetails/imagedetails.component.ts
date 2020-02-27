@@ -3,7 +3,7 @@ import { ProductdataService } from "src/app/productdisplay/productdata.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { ImagedataService } from "src/app/imagedata.service";
 import { product } from "src/app/productdisplay/product";
-import { MatTableDataSource } from "@angular/material";
+import { MatTableDataSource } from "@angular/material/table";
 import { image } from "../image";
 
 @Component({

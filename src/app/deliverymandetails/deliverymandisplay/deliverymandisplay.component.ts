@@ -1,5 +1,9 @@
 import { OnInit, ViewChild, Component } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatSort, MatDialog, ErrorStateMatcher } from '@angular/material';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { DeliverymandataService } from 'src/app/deliverymandata.service';
 import { user } from 'src/app/userdisplay/user';

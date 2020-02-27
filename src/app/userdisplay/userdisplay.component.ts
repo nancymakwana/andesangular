@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { UserdataService } from "./userdata.service";
-import { MatTableDataSource, MatSort, MatPaginator, MatDialogRef, MatDialog } from "@angular/material";
+import { MatDialogRef, MatDialog } from "@angular/material/dialog";
+import { MatPaginator } from "@angular/material/paginator";
+import { MatSort } from "@angular/material/sort";
+import { MatTableDataSource } from "@angular/material/table";
 import { Router } from '@angular/router';
 import { UserMoreDetailsComponent } from './user-more-details/user-more-details.component';
 import { user } from './user';

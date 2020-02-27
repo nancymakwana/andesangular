@@ -1,9 +1,5 @@
 import { Component, OnInit, Inject } from "@angular/core";
-import {
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-  MatDialogModule
-} from "@angular/material";
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialogModule } from "@angular/material/dialog";
 import { UserdataService } from "../userdata.service";
 import { ActivatedRoute } from "@angular/router";
 import { ConcatSource } from 'webpack-sources';

@@ -3,19 +3,14 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { UserdisplayComponent } from "./userdisplay/userdisplay.component";
-import {
-  MatTableModule,
-  MatInputModule,
-  MatDialogRef,
-  MatDialogModule,
-  MatRadioModule,
-  MatFormFieldModule,
-  MatCardModule,
-  MatSelect,
-  MatCheckbox,
-  MatCheckboxModule,
-  MatSelectModule
-} from "@angular/material";
+import { MatCardModule } from "@angular/material/card";
+import { MatCheckbox, MatCheckboxModule } from "@angular/material/checkbox";
+import { MatDialogRef, MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatSelect, MatSelectModule } from "@angular/material/select";
+import { MatTableModule } from "@angular/material/table";
 import { UsermenuComponent } from "./usermenu/usermenu.component";
 import { LayoutModule } from "@angular/cdk/layout";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -23,7 +18,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
-import { MatPaginatorModule } from "@angular/material";
+import { MatPaginatorModule } from "@angular/material/paginator";
 import { rouingarr } from "./app.routing";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { UseraddComponent } from "./userdisplay/useradd/useradd.component";

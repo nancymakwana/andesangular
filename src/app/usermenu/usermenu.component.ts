@@ -3,12 +3,7 @@ import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
 import { Router } from "@angular/router";
-import {
-  MatDialogRef,
-  MatDialogClose,
-  MatDialogContainer,
-  MatDialog
-} from "@angular/material";
+import { MatDialogRef, MatDialogClose, MatDialogContainer, MatDialog } from "@angular/material/dialog";
 
 import { ConfirmationComponent } from '../confirmation/confirmation.component';
 import { ProfileconfirmComponent } from '../profileconfirm/profileconfirm.component';
